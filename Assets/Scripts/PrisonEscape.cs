@@ -1,18 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class NewBehaviourScript : MonoBehaviour
+public class PrisonEscape : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Text textComponent;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    //1. New User Experience
+   
+    //2. Room 1
+    
+    //3. Room 2
+    
+    //4. Room 3
+    
+    //5. End of Game
+
+
     }
+    
 }
