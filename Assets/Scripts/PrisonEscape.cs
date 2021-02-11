@@ -8,8 +8,24 @@ public class PrisonEscape : MonoBehaviour
     public Text textComponent;
 
     //1. New User Experience
-   
+    void Start() {
+        New_User();
+    }
+
+    void New_User() {
+        
+        textComponent.text = "Welcome to Prison escape!\n\nPress [Enter] key to continue";
+        if (Input.GetKey(KeyCode.Return)) {
+            Prison_Game();
+        }
+        
+
+    }
+
+    void Prison_Game() {
+    
     //2. Room 1
+    
     
     //3. Room 2
     
@@ -17,7 +33,9 @@ public class PrisonEscape : MonoBehaviour
     
     //5. End of Game
 
-
     }
+   
     
+
+
 }
