@@ -5,25 +5,36 @@ using UnityEngine.UI;
 
 public class PrisonEscape : MonoBehaviour
 {
-    public Text textComponent;
+    [SerializeField] State startingState;
+    [SerializeField] Text textComponent;
+
+    State state;
 
     //1. New User Experience
     void Start() {
+        state = startingState;
+        textComponent.text = state.GetStateStory();
+
+        
+    }
+
+    void Update() {
         New_User();
+
     }
 
     void New_User() {
         
-        textComponent.text = "Welcome to Prison escape!\n\nPress [Enter] key to continue";
-        if (Input.GetKey(KeyCode.Return)) {
-            Prison_Game();
-        }
+        
         
 
     }
 
     void Prison_Game() {
-    
+    //string game_text;
+
+    print("this is a test");
+
     //2. Room 1
     
     
