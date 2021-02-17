@@ -18,3 +18,6 @@ MonoBehaviour:
     up the 4th.\r\nWho the hell took you? Why? Where are you?\r\n\r\nYou look around
     and take in your surroundings. You \r\n\r\n1. Look in the mirror\r\n2. Check
     your bed\r\n3. Check the door"
+  nextStates:
+  - {fileID: 11400000, guid: e0db67ca02947274ba0a2350e185acd1, type: 2}
+  - {fileID: 11400000, guid: 75222fa467373344dad12db7bd0206f5, type: 2}

@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,39 +14,33 @@ public class PrisonEscape : MonoBehaviour
     void Start() {
         state = startingState;
         textComponent.text = state.GetStateStory();
-
         
     }
 
     void Update() {
-        New_User();
 
+        ManageState();
+        
     }
 
-    void New_User() {
-        
-        
-        
-
+    private void ManageState() {
+        var nextStates = state.GetNextStates();
+        if(Input.GetKeyDown(KeyCode.Alpha1)) {
+            state = nextStates[0];
+        }
+        else if(Input.GetKeyDown(KeyCode.Alpha2)) {
+            state = nextStates[1];
+        }
+        else if(Input.GetKeyDown(KeyCode.Alpha3)) {
+            state = nextStates[2];
+        }
+        else if(Input.GetKeyDown(KeyCode.Alpha4)) {
+            state = nextStates[3];
+        }
+        else {
+            print ("Please enter a valid selection");
+            ManageState();
+        }
     }
-
-    void Prison_Game() {
-    //string game_text;
-
-    print("this is a test");
-
-    //2. Room 1
-    
-    
-    //3. Room 2
-    
-    //4. Room 3
-    
-    //5. End of Game
-
-    }
-   
-    
-
 
 }
