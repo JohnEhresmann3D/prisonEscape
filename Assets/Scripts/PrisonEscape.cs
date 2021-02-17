@@ -25,22 +25,12 @@ public class PrisonEscape : MonoBehaviour
 
     private void ManageState() {
         var nextStates = state.GetNextStates();
-        if(Input.GetKeyDown(KeyCode.Alpha1)) {
-            state = nextStates[0];
-        }
-        else if(Input.GetKeyDown(KeyCode.Alpha2)) {
-            state = nextStates[1];
-        }
-        else if(Input.GetKeyDown(KeyCode.Alpha3)) {
-            state = nextStates[2];
-        }
-        else if(Input.GetKeyDown(KeyCode.Alpha4)) {
-            state = nextStates[3];
-        }
-        else {
-            print ("Please enter a valid selection");
-            ManageState();
-        }
-    }
 
+        for (int index = 0; index < nextStates.Length; index++) {
+            if(Input.GetKeyDown(KeyCode.Alpha1 + index)) {
+                state = nextStates[index];
+            }
+        }
+        textComponent.text = state.GetStateStory();
+    }
 }
